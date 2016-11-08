@@ -10,9 +10,12 @@ import UIKit
 
 class BounterTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var rectangle: UIImageView!
-    @IBOutlet weak var select: UIImageView!
+    @IBOutlet weak var rectangleIcon: UIImageView!
+    
     @IBOutlet weak var wrightLabel: UILabel!
+    
+    @IBOutlet weak var selectIcon: UIImageView!
+    
     var didSelect = true
     var willSelect = true
     
@@ -30,17 +33,17 @@ class BounterTableViewCell: UITableViewCell {
     
     public func showRectangle() {
         if didSelect == true {
-            rectangle.isHidden = false
+            rectangleIcon.isHidden = false
         }else {
-            rectangle.isHidden = true
+            rectangleIcon.isHidden = true
         }
     }
     
     public func showSelect() {
         if willSelect == true {
-            select.isHidden = false
+            selectIcon.isHidden = false
         }else {
-            select.isHidden = true
+            selectIcon.isHidden = true
         }
     }
     

@@ -10,7 +10,10 @@ import UIKit
 
 class BounterMenuTableVC: UITableViewController {
     override func viewDidLoad() {
+        var headView = UIView()
         super.viewDidLoad()
+        let nib = UINib(nibName: "BounterTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "BounterTableViewCell")
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
@@ -26,37 +29,36 @@ class BounterMenuTableVC: UITableViewController {
         return 3
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = BounterTableViewCell()
-        print("\(indexPath.section) ------- \(indexPath.row)")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BounterTableViewCell") as! BounterTableViewCell
         switch indexPath.section {
         
         case 0:
             if indexPath.row == 0 {
-                cell.textLabel?.text = "按时间排序"
+                cell.wrightLabel?.text = "按时间排序"
             }else {
-                cell.textLabel?.text = "按热度排序"
+                cell.wrightLabel?.text = "按热度排序"
             }
             
         case 1:
             if indexPath.row == 0 {
-                cell.textLabel?.text = "学习交流"
+                cell.wrightLabel?.text = "学习交流"
             }else if indexPath.row == 1{
-                cell.textLabel?.text = "物品交换"
+                cell.wrightLabel?.text = "物品交换"
             }else if indexPath.row == 2{
-                cell.textLabel?.text = "团队任务"
+                cell.wrightLabel?.text = "团队任务"
             }else if indexPath.row == 3{
-                cell.textLabel?.text = "用户互约"
+                cell.wrightLabel?.text = "用户互约"
             }else if indexPath.row == 4{
-                cell.textLabel?.text = "待办事项"
+                cell.wrightLabel?.text = "待办事项"
             }else {
-                cell.textLabel?.text = "情感专线"
+                cell.wrightLabel?.text = "情感专线"
             }
             
         default:
             if indexPath.row == 0 {
-                cell.textLabel?.text = "支付宝"
+                cell.wrightLabel?.text = "支付宝"
             }else {
-                cell.textLabel?.text = "当面交易"
+                cell.wrightLabel?.text = "当面交易"
             }
         }
         return cell
@@ -76,6 +78,10 @@ class BounterMenuTableVC: UITableViewController {
         
         return sectionTitle
         
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 48*(sHeight/667)
     }
     
 }

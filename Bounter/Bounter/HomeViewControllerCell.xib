@@ -108,7 +108,7 @@
                 <outlet property="taskTimeLabel" destination="gsf-hT-WTV" id="G6e-r3-jmd"/>
                 <outlet property="taskTitleLabel" destination="GJU-hk-Uli" id="62v-Tv-gvW"/>
             </connections>
-            <point key="canvasLocation" x="24" y="12"/>
+            <point key="canvasLocation" x="-30" y="-22"/>
         </view>
     </objects>
     <resources>

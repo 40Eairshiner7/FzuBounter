@@ -31,12 +31,12 @@ class SquareViewController: UIViewController {
     
     func initMenu() {
         
-        menuWidth = sWidth*(210.0/667.0)
+        menuWidth = sHeight*(210.0/667.0)
         homeNavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeNavigationController") as! UINavigationController
         homeViewController = homeNavigationController.viewControllers.first as! SquareHomeViewController
         
         
-        bounterMenuVC.view.frame = CGRect(x: -menuWidth, y: 0, width: menuWidth, height: sHeight)
+        bounterMenuVC.view.frame = CGRect(x: -menuWidth, y: 30*(sHeight/667), width: menuWidth, height: sHeight)
         homeViewController.view.frame = CGRect(x: 0, y: 0, width: sWidth, height: sHeight)
 
         
@@ -51,8 +51,8 @@ class SquareViewController: UIViewController {
         centerOfMenu = bounterMenuVC.view.center
         centerOfHomeViewAtBegin = centerOfHomeView
         
-        distanceLeftLimit = -bounterMenuVC.view.center.x
-        distanceRightLimit = bounterMenuVC.view.center.x
+        distanceLeftLimit = -menuWidth/2
+        distanceRightLimit = menuWidth/2
         
         print(sWidth)
         print(distanceLeftLimit)
@@ -86,8 +86,7 @@ class SquareViewController: UIViewController {
         
         if centerOfMenu.x + panDistance > distanceLeftLimit && centerOfMenu.x + panDistance < distanceRightLimit {
             bounterMenuVC.view!.center = CGPoint(x: centerOfMenu.x + panDistance, y: bounterMenuVC.view.center.y)
-            homeViewController.view.center = CGPoint(x: centerOfHomeView.x + panDistance / 10, y: self.view.center.y)
-            print(bounterMenuVC.view!.center.x)
+            homeViewController.view.center = CGPoint(x: centerOfHomeView.x + panDistance/4, y: self.view.center.y)
         }
         
         if recongnizer.state == UIGestureRecognizerState.ended {
@@ -126,10 +125,10 @@ class SquareViewController: UIViewController {
             
             if showWhat == "left" {
                 self.bounterMenuVC.view.center = CGPoint(x: self.distanceRightLimit, y: self.bounterMenuVC.view.center.y)
-                self.homeViewController.view.center = CGPoint(x: self.centerOfHomeViewAtBegin.x, y: self.homeViewController.view.center.y)
+                self.homeViewController.view.center = CGPoint(x: self.centerOfHomeViewAtBegin.x+self.menuWidth/4, y: self.homeViewController.view.center.y)
             }else {
                 self.bounterMenuVC.view.center = CGPoint(x: self.distanceLeftLimit, y: self.bounterMenuVC.view.center.y)
-                self.homeViewController.view.center = CGPoint(x: self.centerOfHomeViewAtBegin.x+self.menuWidth * 0.2, y: self.homeViewController.view.center.y)
+                self.homeViewController.view.center = CGPoint(x: self.centerOfHomeViewAtBegin.x, y: self.homeViewController.view.center.y)
             }
             self.centerOfMenu = self.bounterMenuVC.view.center
             self.centerOfHomeView = self.homeViewController.view.center
@@ -145,16 +144,6 @@ class SquareViewController: UIViewController {
     /*--------------------------------------------------------------------------------------*/
     /*--------------------------------------------------------------------------------------*/
     /*--------------------------------------------------------------------------------------*/
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
