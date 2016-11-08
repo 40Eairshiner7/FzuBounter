@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E09738D1DD037E90037F8D9 /* SquareHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09738C1DD037E90037F8D9 /* SquareHomeViewController.swift */; };
+		5E5AE2461DD1C90D0025929C /* AcceptedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AE2451DD1C90D0025929C /* AcceptedTask.swift */; };
+		5E5AE2481DD1C97F0025929C /* HomeViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AE2471DD1C97F0025929C /* HomeViewControllerCell.swift */; };
+		5E5AE24A1DD1D9880025929C /* taskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AE2491DD1D9880025929C /* taskData.swift */; };
+		5EB1CEB91DD0A27A00457FE5 /* CenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB1CEB81DD0A27A00457FE5 /* CenterController.swift */; };
+		5EB64A811DCF5B6B0047EA5B /* BounterMenuTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB64A801DCF5B6B0047EA5B /* BounterMenuTable.swift */; };
+		5EB64A841DCF5D010047EA5B /* BounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB64A821DCF5D010047EA5B /* BounterTableViewCell.swift */; };
+		5EB64A851DCF5D010047EA5B /* BounterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB64A831DCF5D010047EA5B /* BounterTableViewCell.xib */; };
+		5EF7E1331DD02BA20002C0CC /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7E1321DD02BA20002C0CC /* Information.swift */; };
 		5EF82B451DCE10E80070E8B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF82B441DCE10E80070E8B6 /* AppDelegate.swift */; };
-		5EF82B471DCE10E80070E8B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF82B461DCE10E80070E8B6 /* ViewController.swift */; };
-		5EF82B4A1DCE10E80070E8B6 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF82B481DCE10E80070E8B6 /* main.storyboard */; };
+		5EF82B471DCE10E80070E8B6 /* SquareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF82B461DCE10E80070E8B6 /* SquareController.swift */; };
+		5EF82B4A1DCE10E80070E8B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF82B481DCE10E80070E8B6 /* Main.storyboard */; };
 		5EF82B4C1DCE10E80070E8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF82B4B1DCE10E80070E8B6 /* Assets.xcassets */; };
 		5EF82B4F1DCE10E80070E8B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF82B4D1DCE10E80070E8B6 /* LaunchScreen.storyboard */; };
 		5EF82B5A1DCE10E80070E8B6 /* BounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF82B591DCE10E80070E8B6 /* BounterTests.swift */; };
 		5EF82B651DCE10E80070E8B6 /* BounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF82B641DCE10E80070E8B6 /* BounterUITests.swift */; };
 		5EF82B731DCE124B0070E8B6 /* bounter task.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF82B721DCE124B0070E8B6 /* bounter task.xib */; };
-		5EF82B751DCE21E20070E8B6 /* bounter task wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF82B741DCE21E20070E8B6 /* bounter task wide.xib */; };
+		5EF82B751DCE21E20070E8B6 /* HomeViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF82B741DCE21E20070E8B6 /* HomeViewControllerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +45,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E09738C1DD037E90037F8D9 /* SquareHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareHomeViewController.swift; sourceTree = "<group>"; };
+		5E5AE2451DD1C90D0025929C /* AcceptedTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptedTask.swift; sourceTree = "<group>"; };
+		5E5AE2471DD1C97F0025929C /* HomeViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerCell.swift; sourceTree = "<group>"; };
+		5E5AE2491DD1D9880025929C /* taskData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taskData.swift; sourceTree = "<group>"; };
+		5EB1CEB81DD0A27A00457FE5 /* CenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterController.swift; sourceTree = "<group>"; };
+		5EB64A801DCF5B6B0047EA5B /* BounterMenuTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounterMenuTable.swift; sourceTree = "<group>"; };
+		5EB64A821DCF5D010047EA5B /* BounterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounterTableViewCell.swift; sourceTree = "<group>"; };
+		5EB64A831DCF5D010047EA5B /* BounterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BounterTableViewCell.xib; sourceTree = "<group>"; };
+		5EF7E1321DD02BA20002C0CC /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Information.swift; path = Model/Information.swift; sourceTree = "<group>"; };
 		5EF82B411DCE10E80070E8B6 /* Bounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF82B441DCE10E80070E8B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EF82B461DCE10E80070E8B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5EF82B491DCE10E80070E8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/main.storyboard; sourceTree = "<group>"; };
+		5EF82B461DCE10E80070E8B6 /* SquareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareController.swift; sourceTree = "<group>"; };
+		5EF82B491DCE10E80070E8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EF82B4B1DCE10E80070E8B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EF82B4E1DCE10E80070E8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EF82B501DCE10E80070E8B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +68,7 @@
 		5EF82B641DCE10E80070E8B6 /* BounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounterUITests.swift; sourceTree = "<group>"; };
 		5EF82B661DCE10E80070E8B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EF82B721DCE124B0070E8B6 /* bounter task.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "bounter task.xib"; sourceTree = "<group>"; };
-		5EF82B741DCE21E20070E8B6 /* bounter task wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "bounter task wide.xib"; sourceTree = "<group>"; };
+		5EF82B741DCE21E20070E8B6 /* HomeViewControllerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewControllerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +96,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EB1CEB71DD0A25900457FE5 /* Center */ = {
+			isa = PBXGroup;
+			children = (
+				5EB1CEB81DD0A27A00457FE5 /* CenterController.swift */,
+			);
+			name = Center;
+			sourceTree = "<group>";
+		};
+		5EB64A7F1DCEDCBD0047EA5B /* BounterMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5EB64A801DCF5B6B0047EA5B /* BounterMenuTable.swift */,
+				5EB64A821DCF5D010047EA5B /* BounterTableViewCell.swift */,
+				5EB64A831DCF5D010047EA5B /* BounterTableViewCell.xib */,
+			);
+			name = BounterMenu;
+			sourceTree = "<group>";
+		};
+		5EF7E1311DD02B7C0002C0CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EF7E1321DD02BA20002C0CC /* Information.swift */,
+				5E5AE2451DD1C90D0025929C /* AcceptedTask.swift */,
+				5E5AE2491DD1D9880025929C /* taskData.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5EF7E1341DD0351C0002C0CC /* Square */ = {
+			isa = PBXGroup;
+			children = (
+				5EF82B461DCE10E80070E8B6 /* SquareController.swift */,
+				5EF7E1351DD0352B0002C0CC /* Home */,
+				5EB64A7F1DCEDCBD0047EA5B /* BounterMenu */,
+			);
+			name = Square;
+			sourceTree = "<group>";
+		};
+		5EF7E1351DD0352B0002C0CC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5E09738C1DD037E90037F8D9 /* SquareHomeViewController.swift */,
+				5E5AE2471DD1C97F0025929C /* HomeViewControllerCell.swift */,
+				5EF82B741DCE21E20070E8B6 /* HomeViewControllerCell.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		5EF82B381DCE10E80070E8B6 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +167,15 @@
 		5EF82B431DCE10E80070E8B6 /* Bounter */ = {
 			isa = PBXGroup;
 			children = (
+				5EB1CEB71DD0A25900457FE5 /* Center */,
+				5EF7E1341DD0351C0002C0CC /* Square */,
 				5EF82B441DCE10E80070E8B6 /* AppDelegate.swift */,
-				5EF82B461DCE10E80070E8B6 /* ViewController.swift */,
-				5EF82B481DCE10E80070E8B6 /* main.storyboard */,
+				5EF82B481DCE10E80070E8B6 /* Main.storyboard */,
 				5EF82B4B1DCE10E80070E8B6 /* Assets.xcassets */,
 				5EF82B4D1DCE10E80070E8B6 /* LaunchScreen.storyboard */,
 				5EF82B501DCE10E80070E8B6 /* Info.plist */,
 				5EF82B721DCE124B0070E8B6 /* bounter task.xib */,
-				5EF82B741DCE21E20070E8B6 /* bounter task wide.xib */,
+				5EF7E1311DD02B7C0002C0CC /* Model */,
 			);
 			path = Bounter;
 			sourceTree = "<group>";
@@ -239,10 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF82B731DCE124B0070E8B6 /* bounter task.xib in Resources */,
-				5EF82B751DCE21E20070E8B6 /* bounter task wide.xib in Resources */,
+				5EB64A851DCF5D010047EA5B /* BounterTableViewCell.xib in Resources */,
+				5EF82B751DCE21E20070E8B6 /* HomeViewControllerCell.xib in Resources */,
 				5EF82B4F1DCE10E80070E8B6 /* LaunchScreen.storyboard in Resources */,
 				5EF82B4C1DCE10E80070E8B6 /* Assets.xcassets in Resources */,
-				5EF82B4A1DCE10E80070E8B6 /* main.storyboard in Resources */,
+				5EF82B4A1DCE10E80070E8B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +335,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EF82B471DCE10E80070E8B6 /* ViewController.swift in Sources */,
+				5E5AE2481DD1C97F0025929C /* HomeViewControllerCell.swift in Sources */,
+				5E09738D1DD037E90037F8D9 /* SquareHomeViewController.swift in Sources */,
+				5E5AE2461DD1C90D0025929C /* AcceptedTask.swift in Sources */,
+				5EF7E1331DD02BA20002C0CC /* Information.swift in Sources */,
+				5E5AE24A1DD1D9880025929C /* taskData.swift in Sources */,
+				5EB64A841DCF5D010047EA5B /* BounterTableViewCell.swift in Sources */,
+				5EB1CEB91DD0A27A00457FE5 /* CenterController.swift in Sources */,
+				5EF82B471DCE10E80070E8B6 /* SquareController.swift in Sources */,
+				5EB64A811DCF5B6B0047EA5B /* BounterMenuTable.swift in Sources */,
 				5EF82B451DCE10E80070E8B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,12 +380,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5EF82B481DCE10E80070E8B6 /* main.storyboard */ = {
+		5EF82B481DCE10E80070E8B6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5EF82B491DCE10E80070E8B6 /* Base */,
 			);
-			name = main.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		5EF82B4D1DCE10E80070E8B6 /* LaunchScreen.storyboard */ = {
@@ -511,6 +587,7 @@
 				5EF82B6B1DCE10E80070E8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EF82B6C1DCE10E80070E8B6 /* Build configuration list for PBXNativeTarget "BounterTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +596,7 @@
 				5EF82B6E1DCE10E80070E8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EF82B6F1DCE10E80070E8B6 /* Build configuration list for PBXNativeTarget "BounterUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +605,7 @@
 				5EF82B711DCE10E80070E8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

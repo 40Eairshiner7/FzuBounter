@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="Nl4-Rz-3lU">
+        <view contentMode="scaleToFill" restorationIdentifier="HomeViewControllerCell" id="Nl4-Rz-3lU" customClass="HomeViewControllerCell" customModule="Bounter" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -58,6 +58,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym4-RA-TSM">
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="DY3-EX-jwa"/>
+                        <constraint firstAttribute="width" constant="150" id="htJ-Pf-ukU"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,7 +68,6 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="7o4-JC-d7V"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="DQ3-In-gVG"/>
-                        <constraint firstAttribute="width" constant="62" id="jxx-SU-zBv"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="0.8666666666666667" green="0.49019607843137253" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,11 +80,11 @@
                 <constraint firstAttribute="trailing" secondItem="GJU-hk-Uli" secondAttribute="trailing" constant="20" id="BJe-GK-dDW"/>
                 <constraint firstItem="gsf-hT-WTV" firstAttribute="leading" secondItem="VVd-l2-rHC" secondAttribute="trailing" constant="20" id="FDX-OX-GYa"/>
                 <constraint firstItem="m5l-ae-LIr" firstAttribute="leading" secondItem="Nl4-Rz-3lU" secondAttribute="leading" constant="29" id="GXW-Hs-1gv"/>
-                <constraint firstAttribute="trailing" secondItem="xCG-6g-Giz" secondAttribute="trailing" constant="18" id="Loc-u8-OQa"/>
+                <constraint firstItem="xCG-6g-Giz" firstAttribute="leading" secondItem="Ym4-RA-TSM" secondAttribute="trailing" constant="20" id="Jy3-yw-f7x"/>
+                <constraint firstAttribute="trailing" secondItem="xCG-6g-Giz" secondAttribute="trailing" id="Loc-u8-OQa"/>
                 <constraint firstAttribute="bottom" secondItem="xCG-6g-Giz" secondAttribute="bottom" constant="16" id="Lr1-8P-oIm"/>
                 <constraint firstItem="Ym4-RA-TSM" firstAttribute="leading" secondItem="VVd-l2-rHC" secondAttribute="trailing" constant="20" id="M94-Ie-0Dg"/>
                 <constraint firstItem="m5l-ae-LIr" firstAttribute="top" secondItem="Nl4-Rz-3lU" secondAttribute="top" constant="32" id="NUO-hH-Xb6"/>
-                <constraint firstItem="xCG-6g-Giz" firstAttribute="leading" secondItem="Ym4-RA-TSM" secondAttribute="trailing" constant="17" id="OF3-F3-N0b"/>
                 <constraint firstAttribute="trailing" secondItem="gsf-hT-WTV" secondAttribute="trailing" constant="20" id="QJF-3t-8GM"/>
                 <constraint firstItem="Gvb-on-WuA" firstAttribute="top" secondItem="GJU-hk-Uli" secondAttribute="bottom" constant="11" id="SsJ-zk-VzZ"/>
                 <constraint firstAttribute="trailing" secondItem="sHe-tv-yIb" secondAttribute="trailing" constant="20" id="YNr-qH-OYs"/>
@@ -98,6 +98,16 @@
                 <constraint firstItem="Gvb-on-WuA" firstAttribute="leading" secondItem="VVd-l2-rHC" secondAttribute="trailing" constant="18" id="vHX-iy-dTk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="grayLineView" destination="VVd-l2-rHC" id="sIC-8W-gvd"/>
+                <outlet property="paperPlaneIcon" destination="m5l-ae-LIr" id="HvJ-De-uWw"/>
+                <outlet property="tagIcon" destination="Gvb-on-WuA" id="Xpd-XO-r1o"/>
+                <outlet property="tagTextLabel" destination="sHe-tv-yIb" id="t8h-zU-aJ3"/>
+                <outlet property="taskPayLabel" destination="xCG-6g-Giz" id="iU9-mP-L27"/>
+                <outlet property="taskPositionLabel" destination="Ym4-RA-TSM" id="GEb-qx-6dv"/>
+                <outlet property="taskTimeLabel" destination="gsf-hT-WTV" id="G6e-r3-jmd"/>
+                <outlet property="taskTitleLabel" destination="GJU-hk-Uli" id="62v-Tv-gvW"/>
+            </connections>
             <point key="canvasLocation" x="24" y="12"/>
         </view>
     </objects>
