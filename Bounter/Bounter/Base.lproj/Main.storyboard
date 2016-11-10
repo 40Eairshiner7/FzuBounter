@@ -18,7 +18,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="kTP-lT-fOD" kind="relationship" relationship="viewControllers" id="5Ps-1k-UpM"/>
-                        <segue destination="0dO-Mk-srL" kind="relationship" relationship="viewControllers" id="6iY-4k-7XY"/>
+                        <segue destination="QKe-Ta-dun" kind="relationship" relationship="viewControllers" id="6iY-4k-7XY"/>
                         <segue destination="fpP-4A-9NF" kind="relationship" relationship="viewControllers" id="usD-Ys-7FO"/>
                     </connections>
                 </tabBarController>
@@ -29,7 +29,7 @@
         <!--Manage-->
         <scene sceneID="WdU-WK-lve">
             <objects>
-                <viewController id="0dO-Mk-srL" userLabel="Manage" sceneMemberID="viewController">
+                <viewController id="0dO-Mk-srL" userLabel="Manage" customClass="ManageViewController" customModule="Bounter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lbi-Xs-NzP"/>
                         <viewControllerLayoutGuide type="bottom" id="lgi-h5-hui"/>
@@ -38,12 +38,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Manage" image="Manage" id="q72-UJ-4jf"/>
+                    <navigationItem key="navigationItem" id="2Y3-2x-6Sw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9F-NE-ib4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="121"/>
+            <point key="canvasLocation" x="2120.8000000000002" y="120.98950524737631"/>
         </scene>
         <!--Center-->
         <scene sceneID="XgF-oY-Jdv">
@@ -132,7 +133,7 @@
                         <barButtonItem key="rightBarButtonItem" title="发布" id="6yb-QP-zhp"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="pullOutMenu" destination="4TX-aZ-US6" id="xnB-T0-FMp"/>
+                        <outlet property="homeGesture" destination="4TX-aZ-US6" id="2Sl-Q2-O3i"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJW-pT-YDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -158,6 +159,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBu-sZ-tHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1181.5999999999999" y="834.33283358320841"/>
+        </scene>
+        <!--Manage-->
+        <scene sceneID="uBf-ia-31a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QKe-Ta-dun" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Manage" image="Manage" id="q72-UJ-4jf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UYf-nH-1cW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0dO-Mk-srL" kind="relationship" relationship="rootViewController" id="7Tp-Ke-hrc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lts-XF-7J3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181.5999999999999" y="120.98950524737631"/>
         </scene>
     </scenes>
     <resources>

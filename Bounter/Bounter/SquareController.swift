@@ -34,13 +34,11 @@ class SquareViewController: UIViewController {
         menuWidth = sHeight*(210.0/667.0)
         homeNavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeNavigationController") as! UINavigationController
         homeViewController = homeNavigationController.viewControllers.first as! SquareHomeViewController
-        
+        homeViewController.navigationItem.leftBarButtonItem?.action = #selector(SquareViewController.showLeft)
         
         bounterMenuVC.view.frame = CGRect(x: -menuWidth, y: 30*(sHeight/667), width: menuWidth, height: sHeight)
         homeViewController.view.frame = CGRect(x: 0, y: 0, width: sWidth, height: sHeight)
 
-        
-        
         self.addChildViewController(bounterMenuVC)
         self.addChildViewController(homeNavigationController)
         self.view.addSubview(homeNavigationController.view)
@@ -60,24 +58,15 @@ class SquareViewController: UIViewController {
         print(homeViewController.view.center.x)
         print(homeViewController.view.frame.width)
         
-        
     }
     
-    
-    
-    
-    /*--------------------------------------------------------------------------------------*/
-    /*--------------------------------------------------------------------------------------*/
-    /*--------------------------------------------------------------------------------------*/
-    /*--------------------------------------------------------------------------------------*/
-    
-    
-    
+    /*滑出侧边栏*/
+    /*----------------------------------------------------------------------------------------*/
     
     func gestureInit() {
-        let panGesture = homeViewController.pullOutMenu
-        panGesture?.addTarget(self, action: #selector(SquareViewController.pan(_:)))
-        homeViewController.view.addGestureRecognizer(panGesture!)
+        let pullOutMenu = homeViewController.homeGesture
+        pullOutMenu?.addTarget(self, action: #selector(SquareViewController.pan(_:)))
+        homeViewController.view.addGestureRecognizer(pullOutMenu!)
     }
     
     func pan(_ recongnizer: UIPanGestureRecognizer) {
@@ -137,13 +126,8 @@ class SquareViewController: UIViewController {
         
     }
     
+    /*----------------------------------------------------------------------------------------*/
     
-    
-    
-    /*--------------------------------------------------------------------------------------*/
-    /*--------------------------------------------------------------------------------------*/
-    /*--------------------------------------------------------------------------------------*/
-    /*--------------------------------------------------------------------------------------*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

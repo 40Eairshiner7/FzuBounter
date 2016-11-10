@@ -10,7 +10,7 @@ import UIKit
 
 class SquareHomeViewController: UITableViewController {
     
-    @IBOutlet var pullOutMenu: UIPanGestureRecognizer!
+    @IBOutlet var homeGesture: UIPanGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()

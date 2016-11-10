@@ -15,6 +15,8 @@
 		5EB64A811DCF5B6B0047EA5B /* BounterMenuTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB64A801DCF5B6B0047EA5B /* BounterMenuTable.swift */; };
 		5EB64A841DCF5D010047EA5B /* BounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB64A821DCF5D010047EA5B /* BounterTableViewCell.swift */; };
 		5EB64A851DCF5D010047EA5B /* BounterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB64A831DCF5D010047EA5B /* BounterTableViewCell.xib */; };
+		5ECE197A1DD43EBF00FD4FF0 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE19781DD43EBF00FD4FF0 /* ManageViewController.swift */; };
+		5ECE197F1DD4CF1A00FD4FF0 /* MainScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECE197E1DD4CF1A00FD4FF0 /* MainScrollView.xib */; };
 		5EF7E1331DD02BA20002C0CC /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7E1321DD02BA20002C0CC /* Information.swift */; };
 		5EF82B451DCE10E80070E8B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF82B441DCE10E80070E8B6 /* AppDelegate.swift */; };
 		5EF82B471DCE10E80070E8B6 /* SquareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF82B461DCE10E80070E8B6 /* SquareController.swift */; };
@@ -53,6 +55,8 @@
 		5EB64A801DCF5B6B0047EA5B /* BounterMenuTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounterMenuTable.swift; sourceTree = "<group>"; };
 		5EB64A821DCF5D010047EA5B /* BounterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounterTableViewCell.swift; sourceTree = "<group>"; };
 		5EB64A831DCF5D010047EA5B /* BounterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BounterTableViewCell.xib; sourceTree = "<group>"; };
+		5ECE19781DD43EBF00FD4FF0 /* ManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
+		5ECE197E1DD4CF1A00FD4FF0 /* MainScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScrollView.xib; sourceTree = "<group>"; };
 		5EF7E1321DD02BA20002C0CC /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Information.swift; path = Model/Information.swift; sourceTree = "<group>"; };
 		5EF82B411DCE10E80070E8B6 /* Bounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF82B441DCE10E80070E8B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,28 @@
 			name = BounterMenu;
 			sourceTree = "<group>";
 		};
+		5ECE19721DD43DDB00FD4FF0 /* Manage */ = {
+			isa = PBXGroup;
+			children = (
+				5ECE19781DD43EBF00FD4FF0 /* ManageViewController.swift */,
+				5ECE197E1DD4CF1A00FD4FF0 /* MainScrollView.xib */,
+			);
+			name = Manage;
+			sourceTree = "<group>";
+		};
+		5ECE19731DD43DF000FD4FF0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5EF82B441DCE10E80070E8B6 /* AppDelegate.swift */,
+				5EF82B481DCE10E80070E8B6 /* Main.storyboard */,
+				5EF82B4B1DCE10E80070E8B6 /* Assets.xcassets */,
+				5EF82B4D1DCE10E80070E8B6 /* LaunchScreen.storyboard */,
+				5EF82B501DCE10E80070E8B6 /* Info.plist */,
+				5EF82B721DCE124B0070E8B6 /* bounter task.xib */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		5EF7E1311DD02B7C0002C0CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,14 +193,10 @@
 		5EF82B431DCE10E80070E8B6 /* Bounter */ = {
 			isa = PBXGroup;
 			children = (
+				5ECE19731DD43DF000FD4FF0 /* Other */,
+				5ECE19721DD43DDB00FD4FF0 /* Manage */,
 				5EB1CEB71DD0A25900457FE5 /* Center */,
 				5EF7E1341DD0351C0002C0CC /* Square */,
-				5EF82B441DCE10E80070E8B6 /* AppDelegate.swift */,
-				5EF82B481DCE10E80070E8B6 /* Main.storyboard */,
-				5EF82B4B1DCE10E80070E8B6 /* Assets.xcassets */,
-				5EF82B4D1DCE10E80070E8B6 /* LaunchScreen.storyboard */,
-				5EF82B501DCE10E80070E8B6 /* Info.plist */,
-				5EF82B721DCE124B0070E8B6 /* bounter task.xib */,
 				5EF7E1311DD02B7C0002C0CC /* Model */,
 			);
 			path = Bounter;
@@ -311,6 +333,7 @@
 				5EF82B4F1DCE10E80070E8B6 /* LaunchScreen.storyboard in Resources */,
 				5EF82B4C1DCE10E80070E8B6 /* Assets.xcassets in Resources */,
 				5EF82B4A1DCE10E80070E8B6 /* Main.storyboard in Resources */,
+				5ECE197F1DD4CF1A00FD4FF0 /* MainScrollView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +360,7 @@
 			files = (
 				5E5AE2481DD1C97F0025929C /* HomeViewControllerCell.swift in Sources */,
 				5E09738D1DD037E90037F8D9 /* SquareHomeViewController.swift in Sources */,
+				5ECE197A1DD43EBF00FD4FF0 /* ManageViewController.swift in Sources */,
 				5E5AE2461DD1C90D0025929C /* AcceptedTask.swift in Sources */,
 				5EF7E1331DD02BA20002C0CC /* Information.swift in Sources */,
 				5E5AE24A1DD1D9880025929C /* taskData.swift in Sources */,
