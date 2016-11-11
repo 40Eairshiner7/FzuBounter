@@ -21,6 +21,7 @@ class SquareViewController: UIViewController {
     
     var distanceLeftLimit:CGFloat!
     var distanceRightLimit:CGFloat!
+    var headerView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +31,17 @@ class SquareViewController: UIViewController {
     }
     
     func initMenu() {
-        
         menuWidth = sHeight*(210.0/667.0)
+        
+        headerView.backgroundColor = UIColor.white
+        headerView.frame = CGRect(x: -menuWidth, y: 0, width: menuWidth, height: 50*(sHeight/667))
+        
         homeNavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeNavigationController") as! UINavigationController
         homeViewController = homeNavigationController.viewControllers.first as! SquareHomeViewController
         homeViewController.navigationItem.leftBarButtonItem?.action = #selector(SquareViewController.showLeft)
         
-        bounterMenuVC.view.frame = CGRect(x: -menuWidth, y: 30*(sHeight/667), width: menuWidth, height: sHeight)
+        bounterMenuVC.view.frame = CGRect(x: -menuWidth, y: 0, width: menuWidth, height: sHeight)
+        bounterMenuVC.tableView.tableHeaderView = headerView
         homeViewController.view.frame = CGRect(x: 0, y: 0, width: sWidth, height: sHeight)
 
         self.addChildViewController(bounterMenuVC)

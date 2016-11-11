@@ -16,7 +16,6 @@
 		5EB64A841DCF5D010047EA5B /* BounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB64A821DCF5D010047EA5B /* BounterTableViewCell.swift */; };
 		5EB64A851DCF5D010047EA5B /* BounterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB64A831DCF5D010047EA5B /* BounterTableViewCell.xib */; };
 		5ECE197A1DD43EBF00FD4FF0 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE19781DD43EBF00FD4FF0 /* ManageViewController.swift */; };
-		5ECE197F1DD4CF1A00FD4FF0 /* MainScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECE197E1DD4CF1A00FD4FF0 /* MainScrollView.xib */; };
 		5EF7E1331DD02BA20002C0CC /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7E1321DD02BA20002C0CC /* Information.swift */; };
 		5EF82B451DCE10E80070E8B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF82B441DCE10E80070E8B6 /* AppDelegate.swift */; };
 		5EF82B471DCE10E80070E8B6 /* SquareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF82B461DCE10E80070E8B6 /* SquareController.swift */; };
@@ -56,7 +55,6 @@
 		5EB64A821DCF5D010047EA5B /* BounterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounterTableViewCell.swift; sourceTree = "<group>"; };
 		5EB64A831DCF5D010047EA5B /* BounterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BounterTableViewCell.xib; sourceTree = "<group>"; };
 		5ECE19781DD43EBF00FD4FF0 /* ManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
-		5ECE197E1DD4CF1A00FD4FF0 /* MainScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScrollView.xib; sourceTree = "<group>"; };
 		5EF7E1321DD02BA20002C0CC /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Information.swift; path = Model/Information.swift; sourceTree = "<group>"; };
 		5EF82B411DCE10E80070E8B6 /* Bounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF82B441DCE10E80070E8B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				5ECE19781DD43EBF00FD4FF0 /* ManageViewController.swift */,
-				5ECE197E1DD4CF1A00FD4FF0 /* MainScrollView.xib */,
 			);
 			name = Manage;
 			sourceTree = "<group>";
@@ -333,7 +330,6 @@
 				5EF82B4F1DCE10E80070E8B6 /* LaunchScreen.storyboard in Resources */,
 				5EF82B4C1DCE10E80070E8B6 /* Assets.xcassets in Resources */,
 				5EF82B4A1DCE10E80070E8B6 /* Main.storyboard in Resources */,
-				5ECE197F1DD4CF1A00FD4FF0 /* MainScrollView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

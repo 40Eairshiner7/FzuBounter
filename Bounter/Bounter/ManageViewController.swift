@@ -10,13 +10,15 @@ import UIKit
 
 class ManageViewController: UIViewController,UIScrollViewDelegate {
     
-    var acceptedViewController = SquareHomeViewController()
-    var releasedViewController = SquareHomeViewController()
+    var acceptedViewController = SquareHomeViewController()//左边的“已接受”view
+    var releasedViewController = SquareHomeViewController()//右边的“已发布”view
+    var topButton:[UIButton] = [UIButton(type: UIButtonType.custom),UIButton(type: UIButtonType.custom)]
     
     let navigationBarHeight = CGFloat(64.0*(sHeight/667))
-    let BottomBGColor = UIColor(red: 242/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0)
+    let BottomBGColor = UIColor(red: 242/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0)//底边深灰色条
     let baseTopBtnTag = 988
     var currentButton = UIButton()
+    var currentButtonIndex = 0
     let topBackView = UIView()
     
     let normalTextColor = UIColor(red: 155/255.0, green: 155/255.0, blue: 155/255.0, alpha: 1.0)
@@ -25,31 +27,27 @@ class ManageViewController: UIViewController,UIScrollViewDelegate {
     let btnHeight: CGFloat = 40//segment按钮的高
     let bottomHeight: CGFloat = 2//灰色底条的高度
     let sliderHeight: CGFloat = 2//下边滑动条的高度
-    
     let sliderView = UIView()
-    var mainScrollView = UIScrollView()
-    var currentOffset = CGPoint()
     let backViewHeight: CGFloat = 42
     
-    var panGesture:UIPanGestureRecognizer!
     var centerOffset:CGPoint!
-    
+    var mainScrollView = UIScrollView()
+    var currentOffset = CGPoint()
     var titleArray = [String](){
         didSet{
             setBtnAndSplitLineWithTitleArray(titleArray)
         }
     }
     
+    /*----------------------------------------------------------------------------------------*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: "MainScrollView", bundle: nil)
-//        mainScrollView = nib.
         setTopView()
         setBtnBottomLine()
         setupMainScrollView()
         setChildVC()
         titleArray = ["已接受","已发布"]
-//        gestureInit()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,7 +64,6 @@ class ManageViewController: UIViewController,UIScrollViewDelegate {
         currentOffset = mainScrollView.contentOffset
     }
     
-    /*滑出侧边栏*/
     /*----------------------------------------------------------------------------------------*/
 
     func setTopView() {
@@ -122,23 +119,23 @@ class ManageViewController: UIViewController,UIScrollViewDelegate {
         mainScrollView.contentSize = CGSize(width: CGFloat(2) * sWidth, height: 0)
     }
     
-    //创建选项按钮
+    //设置按钮属性
     func setBtnWithIndex(_ i: Int,btnWidth: CGFloat,titlesArray: [String]) ->UIButton {
         let btnFrame = CGRect(x: CGFloat(i)*btnWidth, y: 0, width: btnWidth, height: backViewHeight - sliderHeight)
-        let tempButton = UIButton(type: UIButtonType.custom)
-        tempButton.frame = btnFrame
-        tempButton.backgroundColor = UIColor.clear
-        tempButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        tempButton.setTitle(titlesArray[i] , for: UIControlState())
-        tempButton.setTitleColor(normalTextColor, for: UIControlState())
-        tempButton.setTitleColor(selectedTextColor, for: UIControlState.selected)
-        tempButton.tag = i + baseTopBtnTag//设置一个tag标记，记录这是第几个button
-        tempButton.addTarget(self, action: #selector(ManageViewController.slideBtnClick(_:)), for: UIControlEvents.touchUpInside)
-        return tempButton
+        topButton[i].frame = btnFrame
+        topButton[i].backgroundColor = UIColor.clear
+        topButton[i].titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        topButton[i].setTitle(titlesArray[i] , for: UIControlState())
+        topButton[i].setTitleColor(normalTextColor, for: UIControlState())
+        topButton[i].setTitleColor(selectedTextColor, for: UIControlState.selected)
+        topButton[i].tag = i + baseTopBtnTag//设置一个tag标记，记录这是第几个button
+        topButton[i].addTarget(self, action: #selector(ManageViewController.slideBtnClick(_:)), for: UIControlEvents.touchUpInside)
+        return topButton[i]
     }
     
     //按钮点击事件
     func slideBtnClick(_ sender: UIButton){
+        currentButtonIndex = sender.tag - baseTopBtnTag
         if sender == currentButton{
             return
         }else{
@@ -146,72 +143,27 @@ class ManageViewController: UIViewController,UIScrollViewDelegate {
             sender.isSelected = !sender.isSelected;
             currentButton = sender;
             UIView.animate(withDuration: 0.3, animations: { () -> Void in
-                self.mainScrollView.contentOffset=CGPoint(x: CGFloat(sender.tag - self.baseTopBtnTag) * sWidth, y: 0);
+                self.mainScrollView.contentOffset=CGPoint(x: CGFloat(self.currentButtonIndex) * sWidth, y: 0);
                 self.sliderView.center.x = self.currentButton.center.x
             })
         }
     }
     
-    /*----------------------------------------------------------------------------------------*/
-    
-    /*
-    
-    func gestureInit() {
-        panGestureLeft?.addTarget(self, action: #selector(ManageViewController.leftPan(_:)))
-        releasedViewController.view.addGestureRecognizer(panGestureRight!)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        sliderView.center.x = mainScrollView.contentOffset.x/2 + sWidth/4
     }
- 
-    */
     
-    /*
-    func leftPan(_ recongnizer: UIPanGestureRecognizer) {
-        
-        let panDistance = recongnizer.translation(in: self.view).x
-        
-        mainScrollView.contentOffset = CGPoint(x: CGFloat(centerOffset.x + panDistance), y: 0)
-        
-        if recongnizer.state == UIGestureRecognizerState.ended {
-            
-            if centerOffset.x + panDistance > 0.3 * sWidth {
-                
-                UIView.animate(withDuration: 0.3, animations: { () -> Void in
-                    self.mainScrollView.contentOffset=CGPoint(x: CGFloat(1) * sWidth, y: 0);
-                    //self.sliderView.center.x = self.currentButton.center.x
-                })
-                
-            }
-            
-            centerOffset = mainScrollView.contentOffset
-            
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print(mainScrollView.contentOffset.x)
+        if mainScrollView.contentOffset.x == 0.0 {
+            topButton[0].isSelected = true
+            topButton[1].isSelected = false
+            currentButton = topButton[0]
+        }else{
+            topButton[0].isSelected = false
+            topButton[1].isSelected = true
+            currentButton = topButton[1]
         }
-        
     }
     
-    func rightPan(_ recongnizer: UIPanGestureRecognizer) {
-        
-        let panDistance = recongnizer.translation(in: self.view).x
-        
-        mainScrollView.contentOffset = CGPoint(x: CGFloat(centerOffset.x + panDistance), y: 0)
-        
-        if recongnizer.state == UIGestureRecognizerState.ended {
-            
-            if centerOffset.x + panDistance < -0.3 * sWidth {
-                
-                UIView.animate(withDuration: 0.3, animations: { () -> Void in
-                    self.mainScrollView.contentOffset=CGPoint(x: 0, y: 0);
-                    //self.sliderView.center.x = self.currentButton.center.x
-                })
-                
-            }
-            
-            centerOffset = mainScrollView.contentOffset
-            
-        }
-        
-    }
-    
-    */
-    
-
-
 }
